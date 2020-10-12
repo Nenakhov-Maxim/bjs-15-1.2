@@ -4,18 +4,16 @@ function getResult(a,b,c){
     if (a != 0) {
       let discriminant;
       discriminant = b ** 2 - 4 * a * c;
-      if (discriminant < 0) {
-        alert("Корней нет");
+      alert (discriminant);
+      if (discriminant < 0) {        
         x = [];
-      } else if (discriminant === 0) {
-        alert("Корней 2");
-        let x1 = (-b + discriminant ** 1 / 2) / 2 * a;
-        let x2 = (-b - discriminant ** 1 / 2) / 2 * a;
-        x = [x1, x2];
-      } else if (discriminant > 0) {
-        alert("Корней 1");
-        let x1 = (-b + discriminant ** 1 / 2) / 2 * a;
+      } else if (discriminant === 0) {        
+        let x1 = (-b + discriminant ** (1 / 2)) / (2 * a);        
         x = [x1];
+      } else if (discriminant > 0) {        
+        let x1 = (-b + discriminant ** (1 / 2)) / (2 * a);
+        let x2 = (-b - discriminant ** (1 / 2)) / (2 * a);
+        x = [x1, x2];
       }
     } else {
         alert("a не должен быть равен 0")
