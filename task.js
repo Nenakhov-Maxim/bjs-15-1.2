@@ -3,8 +3,7 @@ function getResult(a,b,c){
     let x = [];
     if (a != 0) {
       let discriminant;
-      discriminant = b ** 2 - 4 * a * c;
-      alert (discriminant);
+      discriminant = b ** 2 - 4 * a * c;      
       if (discriminant < 0) {        
         x = [];
       } else if (discriminant === 0) {        
