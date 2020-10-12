@@ -29,7 +29,7 @@ function getAverageMark(marks){
     } else if (allGrades.length <= 5 ) {
         averageMark = averageScoreMath(allGrades);
     } else if (allGrades.length > 5) {
-        alert('Оценок больше 5. Будут псчитаны первые 5.');
+        alert('Оценок больше 5. Будут посчитаны первые 5.');
         allGradesSlice = allGrades.slice(0, 5);
         allGrades = allGradesSlice;
         averageMark = averageScoreMath(allGrades);
@@ -48,6 +48,14 @@ function averageScoreMath(allGrades) {
 }
 
 function askDrink(name,dateOfBirthday){
-    // код для задачи №3 писать здесь
-    // return result;
+    let result;
+    let today = new Date().getFullYear();    
+    let ageofBirthday = dateOfBirthday.getFullYear();
+    let age = today - ageofBirthday;
+    if (age >= 18) {
+        result = `Не желаете ли олд-фэшн, ${name}?`;        
+    } else {
+        result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
+    }    
+    return result;
 }
